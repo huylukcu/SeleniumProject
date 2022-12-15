@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import static java.lang.Thread.sleep;
 import static org.junit.Assert.assertTrue;
 
     public class Day03_Checkbox {
