@@ -15,10 +15,10 @@ public class Checkbox {
     WebDriver driver;
     @Before
     public void setUp(){
-        //        user goes to http://a.testaddressbook.com/sign_in
+        //  user goes to http://a.testaddressbook.com/sign_in
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-//        IMPLICIT WAIT
+       //  IMPLICIT WAIT
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));//15 seconds wait in case needed
         driver.manage().window().maximize();
         driver.get("https://testcenter.techproeducation.com/index.php?page=checkboxes");

@@ -11,22 +11,34 @@ import java.time.Duration;
 
 public class Day04_xpath_css {
     WebDriver driver;
+
     @Before
-    public void setup(){
+    public void setup() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
         driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
     }
+
     @Test
-    public void loginTest(){
-    //locating username and typing username
+    public void loginTest() {
+        //locating username and typing username
         driver.findElement(By.xpath("//input[@name='username']")).sendKeys("Admin");
-    //locating password and typing password
+        //locating password and typing password
         driver.findElement(By.xpath("//input[@name='password']")).sendKeys("admin123");
-    //locating login button and click
+        //locating login button and click
         driver.findElement(By.xpath("//button[@type='submit']")).click();
+    }
+
+    @Test
+    public void loginTestCss() {
+        //locating username and typing username
+        driver.findElement(By.cssSelector("input[name='username']")).sendKeys("Admin");
+        //locating password and typing password
+        driver.findElement(By.cssSelector("input[name='password']")).sendKeys("admin123");
+        //locating login button and click
+        driver.findElement(By.cssSelector("button[type='submit']")).click();
     }
 }
 
