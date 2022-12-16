@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Day04_LinkTest {
+public class Day04_LinkText {
     WebDriver driver;
     @Before
     public  void setUp() {
