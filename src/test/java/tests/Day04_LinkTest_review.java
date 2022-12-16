@@ -1,22 +1,24 @@
 package tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class Day04_LinkTest_review {
     //Go to https://techproeducation.com/
     //Locate the LMS LOGIN with link text
     //Click on LMS LOGIN
     //Assert that LMS page is visible
-
     WebDriver driver;
 
     @Before
@@ -26,7 +28,6 @@ public class Day04_LinkTest_review {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.manage().window().maximize();
     }
-
     @Test
     public void LMSPage(){
         //Go to https://techproeducation.com/
@@ -55,8 +56,12 @@ public class Day04_LinkTest_review {
         driver.findElement(By.partialLinkText("LMS LO")).click();
 
         //Assert that LMS page is visible
-
+        WebElement loginRegisterLink = driver.findElement(By.linkText("Login/Register"));
+        assertTrue(loginRegisterLink.isDisplayed());//isDisplayed() method returns true if the element is displayed on the page otherwise it returns false.
     }
+    @After
+    public void tearDown(){
+        driver.quit();
     }
-
+}
 
