@@ -5,7 +5,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
 
@@ -55,6 +57,40 @@ public class Q04 {
 
         // Assert the result
         assertEquals("10",result);
+
+        // Print the result
+        System.out.println("result = " + result);
+
+    }
+
+    @Test
+    public void divisionTest(){
+        // Navigate to  https://testpages.herokuapp.com/styled/index.html
+        driver.get("https://testpages.herokuapp.com/styled/index.html");
+
+        // Click on  Calculator under Micro Apps
+        driver.findElement(By.id("calculatetest")).click();
+
+        //Select 'divide' operation
+        WebElement functionDropDown = driver.findElement(By.id("function"));
+        new Select(functionDropDown).selectByVisibleText("divide");
+
+
+        // Type any number in the first input
+        driver.findElement(By.id("number1")).sendKeys("6");
+
+        // Type any number in the second input
+        driver.findElement(By.id("number2")).sendKeys("2");
+
+
+        // Click on Calculate
+        driver.findElement(By.id("calculate")).click();
+
+        // Get the result
+        String result = driver.findElement(By.id("answer")).getText();
+
+        // Assert the result
+        assertEquals("3",result);
 
         // Print the result
         System.out.println("result = " + result);
