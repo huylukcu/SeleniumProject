@@ -23,21 +23,4 @@ public class MyXpathNote {
 
      */
 
-
-     *
-
-     /
-     */
-
-
-
-       -
-
-
-
-
-
-     */
-
-
 }

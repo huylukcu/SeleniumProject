@@ -16,8 +16,16 @@ public class JustTry {
         driver = new ChromeDriver();
         driver.get("http://amazon.com");}
      @Test
-     public void test(){
-        driver.findElement(By.id("searchDropdownBox"));
+     public void test() {
+         driver.findElement(By.id("searchDropdownBox"));
+     }
+      @Test
+      public void test2() {
+        driver.get("https://kansascity.craigslist.org/");
+        driver.findElement(By.className("jobs")).click();
+
+
+
 
         }
     }
