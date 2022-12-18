@@ -24,8 +24,13 @@ public class Day07_Alerts extends TestBase {
         Assert.assertEquals("You successfully clicked an alert",actualResult);
 
         Thread.sleep(2000);
-
-
+    }
+    @Test
+    public void dismissAlert(){
+       // dismissAlert()=> click on the second alert,
+       //verify text "I am a JS Confirm”,
+       //click cancel,
+       //and Verify “You clicked: Cancel”
     }
 }
 
