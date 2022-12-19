@@ -30,6 +30,6 @@ public class Day04_LinkText {
     public void LMSPagePartialLinkText(){
         driver.get("https://techproeducation.com/");
         driver.findElement(By.partialLinkText("LMS LO")).click();
-
     }
+
 }

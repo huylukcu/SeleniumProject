@@ -1,6 +1,7 @@
 package tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -39,6 +40,11 @@ public class Day04_xpath_css {
         driver.findElement(By.cssSelector("input[name='password']")).sendKeys("admin123");
         //locating login button and click
         driver.findElement(By.cssSelector("button[type='submit']")).click();
+    }
+    @After
+    public void tearDown() {
+        driver.quit();
+
     }
 }
 
