@@ -1,6 +1,8 @@
 package selenium_review;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -23,11 +25,19 @@ public class RadioButton {
             driver.get("https://testcenter.techproeducation.com/index.php?page=radio-buttons");
         }
         @Test
-    public void radioButtonTest() throws InterruptedException {
-            driver.findElement(By.id("yellow")).click();
-            Thread.sleep(2000);
-            driver.findElement(By.id("blue")).click();
+       public void radioButtonTest() {
+            //Select red
+            WebElement redOpt = driver.findElement(By.id("red"));
+            redOpt.click();
+            Assert.assertTrue(redOpt.isSelected());//verify the red button selected
+            //Select hockey
+            WebElement hockOpt = driver.findElement(By.id("hockey"));
+            hockOpt.click();
+            Assert.assertTrue(hockOpt.isSelected());
 
         }
-
+        @After
+    public void tearDown() {
+            driver.quit();
+        }
     }

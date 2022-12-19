@@ -1,6 +1,7 @@
 package tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -25,15 +26,20 @@ public class Day05_RadioButton {
 
     @Test
     public void radioTest(){
+        //select red
         WebElement redOption = driver.findElement(By.id("red"));
         redOption.click();
         Assert.assertTrue(redOption.isSelected());//Verifying teh red radio button is selected
-//        select football
+        //select football
         WebElement footballOption = driver.findElement(By.id("football"));
         footballOption.click();
         Assert.assertTrue(footballOption.isSelected());//Verifying the football option is selected
     }
 
+        @After
+        public void tearDown() {
+        driver.quit();
+    }
 }
 
 
