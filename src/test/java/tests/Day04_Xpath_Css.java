@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Day04_xpath_css {
+public class Day04_Xpath_Css {
     WebDriver driver;
 
     @Before

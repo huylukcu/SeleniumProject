@@ -11,7 +11,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class day05_dynamic_xpath {
+public class Day05_Dynamic_Xpath {
     WebDriver driver;
 
     @Before
@@ -25,15 +25,15 @@ public class day05_dynamic_xpath {
 
     @Test
     public void dynamicXpath() {
-//        1. XPATH = //*[.='TEXT OF THE ELEMENT']
-//        Verify if "Username : Admin" is text is displayed on the page
-//        //[.='Username : Admin'] return the element whose text = Username : Admin
+    //1. XPATH = //*[.='TEXT OF THE ELEMENT']
+    //Verify if "Username : Admin" is text is displayed on the page
+    //[.='Username : Admin'] return the element whose text = Username : Admin
         WebElement userNameText = driver.findElement(By.xpath("//*[.='Username : Admin']"));
         Assert.assertTrue(userNameText.isDisplayed());
-//        Verify if "Password : admin123" text is displayed on the page
+    //Verify if "Password : admin123" text is displayed on the page
         WebElement passwordText = driver.findElement(By.xpath("//*[.='Password : admin123']"));
         Assert.assertTrue(passwordText.isDisplayed());
-//        2. XPATH = //[(text()='TEXT OF THE ELEMENT')]
+    //2. XPATH = //[(text()='TEXT OF THE ELEMENT')]
         WebElement userNameText1 = driver.findElement(By.xpath("//*[(text()='Username : Admin')]"));
         Assert.assertTrue(userNameText1.isDisplayed());
     }
