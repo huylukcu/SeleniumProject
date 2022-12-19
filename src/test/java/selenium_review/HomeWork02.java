@@ -19,14 +19,17 @@ public class HomeWork02 {
      */
     public static void main(String[] args) {
 
-        WebDriverManager.chromedriver().setup();
+        System.setProperty("webdriver.chrome.driver", "./src/resources/drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
+
+
 
         driver.get("https://www.google.com/");
 
 
-        driver.findElement(By.id("input")).sendKeys("porcelain teapot"+ Keys.ENTER);
+        driver.findElement(By.name("q")).
+                sendKeys("porcelain teapot"+ Keys.ENTER);
 
 
     }
