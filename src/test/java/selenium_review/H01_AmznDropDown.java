@@ -1,12 +1,14 @@
 package selenium_review;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
 
@@ -15,7 +17,6 @@ public class H01_AmznDropDown {
     Create A Class: AmazonDropdown
     Create A Method dropdownTest
     Go to https://www.amazon.com/
-    Find the element of the dropdown element. HINT: By.id(“searchDropdownBox")
     Print the first selected option and assert if it equals “All Departments”.If it fails, then comment that code out and continue rest of the test case.
     Select the 4th option by index (index of 3) and assert if the name is “Amazon Devices”.(after you select you need to use get first selected option method). If it fails, then comment that code out and continue rest of the test case.
     Print all of the dropdown options-getOptions(); method returns the List<WebElement>. Using loop, print all options.
@@ -34,9 +35,11 @@ public class H01_AmznDropDown {
         }
         @Test
     public void dropdowntest(){
-        driver.findElement(By.id("twotabsearchtextbox"));
-            WebElement selectElement = driver.
+        //Find the element of the dropdown element. HINT: By.id(“searchDropdownBox")
+         WebElement dropdown = driver.findElement(By.id("searchDropdownBox"));
+            Select select = new Select(dropdown);
+            select.selectByIndex(0);
+        }
 
-
-    }}
+}
 
