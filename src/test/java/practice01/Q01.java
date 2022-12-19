@@ -37,9 +37,6 @@ public class Q01 {
         // Close/Quit the browser
         // And last step : print "ALL OK" on console
 
-
-
-
     }
 
     }
