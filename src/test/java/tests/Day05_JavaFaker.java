@@ -31,8 +31,36 @@ public class Day05_JavaFaker {
         String username = faker.name().username();
         System.out.println(username);
 
+        //        title
+        String title = faker.name().title();
+        System.out.println(title);
+
+//        city
+        String city = faker.address().city();
+        System.out.println(city);
+
+//        state
+        String state = faker.address().state();
+        System.out.println(state);
+
+//        full address
         String fullAddress = faker.address().fullAddress();
         System.out.println(fullAddress);
 
+//        cell phone
+        String cellPhone = faker.phoneNumber().cellPhone();
+        System.out.println(cellPhone);
+
+//        email
+        String email = faker.internet().emailAddress();
+        System.out.println(email);
+
+//        zip code
+        String zipCode = faker.address().zipCode();
+        System.out.println(zipCode);
+
+//        random digit number
+        String randomDigits = faker.number().digits(10);
+        System.out.println(randomDigits);
     }
 }
