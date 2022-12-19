@@ -13,7 +13,7 @@ public class Day07_Alerts extends TestBase {
         driver.findElement(By.xpath("//button[@onclick='jsAlert()']")).click();
 
         //verify the text “I am a JS Alert” ,
-        String actualAlertText = driver.switchTo().alert().getText();
+        String actualAlertText = driver.switchTo().alert().getText();//special method
         Assert.assertEquals("I am a JS Alert",actualAlertText);
 
         //click OK ,

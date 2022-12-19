@@ -15,8 +15,4 @@ public class Day07_TestBaseDemo extends TestBase {
         driver.get("https://techproeducation.com/");
 
     }
-
-
-
-
 }
