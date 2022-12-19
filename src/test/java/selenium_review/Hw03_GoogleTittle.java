@@ -32,8 +32,14 @@ public class Hw03_GoogleTittle {
         String actualTitle = driver.getTitle();//Return type String,actual data seleniumda gelir
         String expectedTitle = "Google"; //expected data userstory den gelir,web page de olandir
         //verify bu sayfa dogru sayfa mi
-
-
+        if(actualTitle.equals(expectedTitle)){
+            System.out.println("PASS");
+        }else{
+            System.out.println("FAIL");
+            System.out.println("Actual Title "+ actualTitle);
+            System.out.println("Expected Title "+ expectedTitle);
+        }
     }
-
-}
+        @Test
+           public void googleImg() {
+        }}

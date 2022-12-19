@@ -1,15 +1,11 @@
 package selenium_review;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.Before;
-import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class HomeWork02 {
+public class H02 {
     /*
     Create a new class : GoogleSearchTest 
     Create main method and complete the following task. 

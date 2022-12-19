@@ -1,6 +1,16 @@
 package selenium_review;
 
-public class Homework01 {
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.time.Duration;
+
+public class H01_AmznDropDown {
     /*
     Create A Class: AmazonDropdown
     Create A Method dropdownTest
@@ -13,4 +23,20 @@ public class Homework01 {
     Assert if ‘Appliances’ is a drop down option. Print true if “Appliances” is an option. Print false otherwise.
             BONUS: Assert if the dropdown is in Alphabetical Order
   */
-}
+    WebDriver driver;
+    @Before
+    public void setUp(){
+        WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver();
+            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+            driver.manage().window().maximize();
+            driver.get("https://www.amazon.com/");
+        }
+        @Test
+    public void dropdowntest(){
+        driver.findElement(By.id("twotabsearchtextbox"));
+            WebElement selectElement = driver.
+
+
+    }}
+
