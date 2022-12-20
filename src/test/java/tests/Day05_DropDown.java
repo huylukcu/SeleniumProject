@@ -74,16 +74,15 @@ public class Day05_DropDown {
                     isOption2Exist=true;
                 }
             }
-//        fails if Option 2 is not in the dropdown
-//        pass if Option 2 is in the dropdown
+        //fails if Option 2 is not in the dropdown
+        //pass if Option 2 is in the dropdown
             Assert.assertTrue(isOption2Exist);
         }
 
-//6.Create method printFirstSelectedOptionTest Print first selected option
-//7.Find the size of the dropdown, Print "Expected Is Not Equal Actual" if there are not 3 elements in the
+        //**Create method printFirstSelectedOptionTest Print first selected option
+        //**Find the size of the dropdown, Print "Expected Is Not Equal Actual" if there are not 3 elements in the
         @After
         public void tearDown() {
             driver.quit();
         }
-
     }
