@@ -25,6 +25,7 @@ public class Day05_DropDown {
             driver.manage().window().maximize();
             driver.get("https://testcenter.techproeducation.com/index.php?page=dropdown");
         }
+        @Test
         public void selectByIndexTest(){
         //**Select Option 1 by index from the dropdown
         //1. locate the dropdown
@@ -40,9 +41,8 @@ public class Day05_DropDown {
             WebElement dropdown = driver.findElement(By.id("dropdown"));
             Select select = new Select(dropdown);
             select.selectByVisibleText("Option 2");
-            //WebElement dropdown
         }
-        //3.Create method selectByValueTest Select Option 1 value by value
+        //**Create method selectByValueTest Select Option 1 value
         @Test
         public void selectByValueTest() throws InterruptedException {
             WebElement dropdown = driver.findElement(By.id("dropdown"));
@@ -56,18 +56,18 @@ public class Day05_DropDown {
             Thread.sleep(3000);
             select.selectByValue("2");
         }
-        //4.Create method printAllTest Print all dropdown value
+        //**Create method printAllTest Print all dropdown value
         @Test
         public void printAllTest(){
             WebElement dropdown = driver.findElement(By.id("dropdown"));
             Select select = new Select(dropdown);
-//        getOptions(); returns all of the dropdown options
+        //getOptions(); returns all of the dropdown options
             List<WebElement> allOptions = select.getOptions();
             for (WebElement eachOption : allOptions){
-//            getText() returns the TEXT of the webelements as STRING
+        //getText() returns the TEXT of the webelements as STRING
                 System.out.println(eachOption.getText());
             }
-//    5. Verify the dropdown has Option 2 text
+        //**Verify the dropdown has Option 2 text
             boolean isOption2Exist=false;
             for (WebElement eachOption : allOptions){
                 if (eachOption.getText().equals("gadhstdhdrtyjh")){
