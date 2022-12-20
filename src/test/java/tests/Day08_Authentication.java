@@ -8,7 +8,7 @@ public class Day08_Authentication extends TestBase {
 
 
     @Test
-    public void authTest(){
+    public void authTest() {
         /*
         username :admin
         pass     :admin
@@ -22,6 +22,18 @@ public class Day08_Authentication extends TestBase {
         String successMessage = driver.findElement(By.xpath("//p")).getText();
         Assert.assertTrue(successMessage.contains("Congratulations! You must have the proper credentials."));
     }
+
+}
+
+
+
+
+
+
+
+
+    }
+
 }
 
 
