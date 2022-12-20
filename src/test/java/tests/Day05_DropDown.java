@@ -55,6 +55,7 @@ public class Day05_DropDown {
             select.selectByValue("1");
             Thread.sleep(3000);
             select.selectByValue("2");
+
         }
         //**Create method printAllTest Print all dropdown value
         @Test
@@ -70,19 +71,34 @@ public class Day05_DropDown {
         //**Verify the dropdown has Option 2 text
             boolean isOption2Exist=false;
             for (WebElement eachOption : allOptions){
-                if (eachOption.getText().equals("gadhstdhdrtyjh")){
+                if (eachOption.getText().equals("Option 2")){
                     isOption2Exist=true;
                 }
             }
-        //fails if Option 2 is not in the dropdown
-        //pass if Option 2 is in the dropdown
+//        fails if Option 2 is not in the dropdown
+//        pass if Option 2 is in the dropdown
             Assert.assertTrue(isOption2Exist);
         }
 
-        //**Create method printFirstSelectedOptionTest Print first selected option
+
+    //**Create method printFirstSelectedOptionTest Print first selected option
+          public void printFirstSelectedOptionTest(){
+            WebElement dropdown = driver.findElement(By.id("dropdown"));
+            Select select = new Select(dropdown);
+          }
         //**Find the size of the dropdown, Print "Expected Is Not Equal Actual" if there are not 3 elements in the
         @After
         public void tearDown() {
+
             driver.quit();
         }
+        /*
+    -What is a dropdown?
+        ---Dropdown is a webElement. It has list of options.
+    -How do you handle dropdown? What do you do to automate dropdown?
+        ---Dropdowns are created using Select class. So we first locate the dropdown element, then use select class
+        to interact with dropdown elements.
+    -How do you select dropdown elements?
+        ---We actually have 3 options to select a dropdown(index,value,visible text)
+     */
     }
