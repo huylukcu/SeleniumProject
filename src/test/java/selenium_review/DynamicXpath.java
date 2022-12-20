@@ -2,7 +2,6 @@ package selenium_review;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.After;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -14,7 +13,7 @@ import java.time.Duration;
 
 import static org.junit.Assert.assertTrue;
 
-public class Day05_DynamicXpath {
+public class DynamicXpath {
 
     //        Verify if "Username : Admin" text is displayed on the page
     WebDriver driver;
