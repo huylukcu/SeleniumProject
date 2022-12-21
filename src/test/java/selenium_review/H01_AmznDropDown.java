@@ -39,8 +39,10 @@ public class H01_AmznDropDown {
             WebElement dropdown = driver.findElement(By.id("searchDropdownBox"));
             Select select = new Select(dropdown);
             select.selectByIndex(0);
+            System.out.println(dropdown);
         }
-        @Test
+}
+    /*    @Test
     public void print() {
             //** Print all of the dropdown options-getOptions(); method returns the List<WebElement>. Using loop, print all options.
             WebElement dropdown = driver.findElement(By.id("searchDropdownBox"));
@@ -48,10 +50,15 @@ public class H01_AmznDropDown {
             List<WebElement> allOptions = select.getOptions();//it(getoptions) turns list
             for (WebElement eachOpt : allOptions) {
                 System.out.println(eachOpt.getText());
-
             }
+            boolean isAllElement = false;
+            for (WebElement eachOpt : allOptions) {
+                if (eachOpt.getText().equals("All Departments")) {
+                    isAllElement = true;
+                }
+            }
+            Assert.assertTrue(isAllElement);
         }}
-
-
+*/
 
 

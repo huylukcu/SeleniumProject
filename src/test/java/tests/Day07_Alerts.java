@@ -28,7 +28,9 @@ public class Day07_Alerts extends TestBase {
     @Test
     public void dismissAlert(){
        // dismissAlert()=> click on the second alert,
-       //verify text "I am a JS Confirm”,
+        driver.get("https://testcenter.techproeducation.com/index.php?page=javascript-alerts");
+        driver.findElement(By.xpath("//button[@onClick='jsConfirm()']"));
+        //verify text "I am a JS Confirm”,
        //click cancel,
        //and Verify “You clicked: Cancel”
     }
