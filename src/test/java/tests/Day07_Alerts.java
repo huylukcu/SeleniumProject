@@ -27,23 +27,23 @@ public class Day07_Alerts extends TestBase {
     }
     @Test
     public void dismissAlert() throws InterruptedException {
-        //        dismissAlert()=> click on the second alert,
+        //dismissAlert()=> click on the second alert,
         Thread.sleep(3000);
         driver.get("https://testcenter.techproeducation.com/index.php?page=javascript-alerts");
         driver.findElement(By.xpath("//button[@onclick='jsConfirm()']")).click();
 
-        //         verify text "I am a JS Confirm”,
+        //verify text "I am a JS Confirm”,
         Thread.sleep(3000);
         String actualAlertText = driver.switchTo().alert().getText();
         Assert.assertEquals("I am a JS Confirm",actualAlertText);
 
-        //        click cancel,
+        //click cancel,
 
         driver.switchTo().alert().dismiss();
         Thread.sleep(3000);
 
 
-        //        and Verify “You clicked: Cancel”
+        //and Verify “You clicked: Cancel”
         String actualResult = driver.findElement(By.id("result")).getText();
         Assert.assertEquals("You clicked: Cancel",actualResult);
         Thread.sleep(3000);
@@ -55,11 +55,19 @@ public class Day07_Alerts extends TestBase {
         driver.findElement(By.xpath("//button[@onclick='jsPrompt()']")).click();
 
         //verify text “I am a JS prompt”,
-        String
+        String actualAlert = driver.switchTo().alert().getText();
+        Assert.assertEquals("I am a JS prompt", actualAlert);
+
         //type “Hello World”,
+        driver.switchTo().alert().sendKeys("Hello World");
+
         //click OK,
+        driver.switchTo().alert().accept();
+
         //and Verify “You entered: Hello World”
-    }
-}
+        String actual = driver.findElement(By.id("result")).getText();
+        Assert.assertEquals("You entered: Hello World",actual);
+
+    }}
 
 
