@@ -16,6 +16,8 @@ public class Day09_Cookies extends TestBase {
 //        2. Print all the cookies
         for (Cookie eachCookie : allCookies){
             System.out.println("Cookie ==>>> "+eachCookie);
+            System.out.println();
+            System.out.println();
         }
 //        3. Get the cookies by their name
 //        4. Add new cookie

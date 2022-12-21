@@ -26,13 +26,21 @@ public class Day07_Alerts extends TestBase {
         Thread.sleep(2000);
     }
     @Test
-    public void dismissAlert(){
+    public void dismissAlert() throws InterruptedException {
        // dismissAlert()=> click on the second alert,
         driver.get("https://testcenter.techproeducation.com/index.php?page=javascript-alerts");
         driver.findElement(By.xpath("//button[@onClick='jsConfirm()']"));
+
         //verify text "I am a JS Confirm”,
+        Thread.sleep(3000);
+        String actualAlertText = driver.switchTo().alert().getText();
+        Assert.assertEquals("I am a JS Confirm",actualAlertText);
        //click cancel,
+        String actualResult = driver.findElement(By.id("result")).getText();
+        Assert.assertEquals("You clicked: Cancel",actualResult );
+        Thread.sleep(3000);
        //and Verify “You clicked: Cancel”
+
     }
 }
 
