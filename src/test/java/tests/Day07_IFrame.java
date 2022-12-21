@@ -15,12 +15,15 @@ public class Day07_IFrame extends TestBase {
         //Create a method: iframeTest
         //Go to https://the-internet.herokuapp.com/iframe
         driver.get("https://the-internet.herokuapp.com/iframe");
+
         //Verify the Bolded text contains “Editor”
         //Header is not in the iframe so do not switch to iframe
         String header = driver.findElement(By.xpath("//h3")).getText();
         Assert.assertTrue(header.contains("Editor"));
+
         //NOTE: textbox is in the iframe so we have to switch to teh iframe
         driver.switchTo().frame(0);
+
         //Locate the text box
         WebElement box = driver.findElement(By.xpath("//p"));
         //Delete the text in the text box

@@ -1,4 +1,4 @@
-package selenium_review;
+package practice01;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
