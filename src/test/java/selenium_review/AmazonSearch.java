@@ -15,13 +15,22 @@ public class AmazonSearch {
     WebDriver driver;
     @Test
    public void setUp() {
-        //User goes to "https://www.amazon.com/"
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.amazon.com/");
+        driver.get("https://www.amazon.com/");//go to url
 
-        driver.findElement(By.id("twotabsearchtextbox")).
-                sendKeys("charger"+ Keys.ENTER);
+       String searchItem = "dyson";
+       driver.findElement(By.id("twotabsearchtextbox")).
+               sendKeys(searchItem + Keys.ENTER);
+
+       String actual = driver.findElement(By.id("twotabsearchtextbox")).getText();
+       if(searchItem.equals(actual)){
+           System.out.println("pass");
+       }else{
+           System.out.println("fail");
+           System.out.println("actual= "+ actual);
+           System.out.println("searchItem = "+ searchItem);
+       }
 
 }}

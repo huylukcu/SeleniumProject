@@ -8,7 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class Hw03_GoogleTittle {
+public class Test03GoogleTittle {
 
    /* Then create 3 different test methods using the following names. And Go to google. 
     titleTest =>Verify if google title = “Google” 
