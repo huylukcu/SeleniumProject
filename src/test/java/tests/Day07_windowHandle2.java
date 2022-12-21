@@ -19,8 +19,14 @@ public class Day07_windowHandle2 extends TestBase {
         //Then user verifies the title of the page is “The Internet”
         Assert.assertEquals("The Internet",driver.getTitle());
 
+        //GETTING THE WINDOW 1 HANDLE(UNIQUE PAGE ID)
+        String windowhandle =driver.getWindowHandle(); //RETURN THE CURRENT WINDOW ID
+        System.out.println(windowhandle);
+
+
         //When user clicks on the “Click Here” button
         driver.findElement(By.linkText("Click Here")).click();
+
 
         //Then user verifies the new window title is “New Window”
 
