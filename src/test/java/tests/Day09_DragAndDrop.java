@@ -42,8 +42,7 @@ public class Day09_DragAndDrop extends TestBase {
     }
     @Test
             public void moveByOffsetTest(){
-
-        driver.get("https://jqueryui.com/droppable/");
+     driver.get("https://jqueryui.com/droppable/");
     //And user moves the target element(Drag me to my target) in to  destination(Drop here)
      //Below elements are in the iframes so switch to iframe first
         driver.switchTo().frame(0);//switching to the first iframe
@@ -54,7 +53,7 @@ public class Day09_DragAndDrop extends TestBase {
     actions.clickAndHold(source).moveByOffset(400,-10).build().perform();
 
 
-}
+}}
 
 
 

@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class H02 {
+public class Test02Google {
     /*
     Create a new class : GoogleSearchTest 
     Create main method and complete the following task. 

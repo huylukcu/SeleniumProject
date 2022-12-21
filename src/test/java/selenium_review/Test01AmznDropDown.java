@@ -1,7 +1,6 @@
 package selenium_review;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -11,9 +10,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 import java.time.Duration;
-import java.util.List;
 
-public class H01_AmznDropDown {
+public class Test01AmznDropDown {
     /*
     Print the first selected option and assert if it equals “All Departments”.If it fails, then comment that code out and continue rest of the test case.
     Select the 4th option by index (index of 3) and assert if the name is “Amazon Devices”.(after you select you need to use get first selected option method). If it fails, then comment that code out and continue rest of the test case.
