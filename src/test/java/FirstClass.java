@@ -10,6 +10,4 @@ public class FirstClass {
 
         //2. CREATE CHROME DRIVER
         WebDriver driver = new ChromeDriver();
-
-        //3. NOW THAT WE CREATED WEBDRIVER, WE CAN AUTOMATE WEB APPLICATION
-        driver.get("https://techproeducation.com/");}}
+    }}
