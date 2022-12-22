@@ -12,11 +12,18 @@ public class Day01_BasicNavigations {
         Set Path
         Create chrome driver
         */
+       /*For Atomation classimiza otomasyon icin gerekli web driver in yerini gostermeliyiz.
+        Bunun icin Java library den System.setProperty() metodunu kullaniriz.method iki parametre
+        istemektedir.
+        --> kullanicagimiz driver:webdriver.chrome.driver
+        --> driverin bilgisyarda bulundugu yer:/src/resources/drivers/chromedriver
+        */
+
         // 1 - Setup Chrome driver
         System.setProperty("webdriver.chrome.driver","./src/resources/drivers/chromedriver");
 
         //2 - Create Chrome driver
-        WebDriver driver = new ChromeDriver();
+        WebDriver driver = new ChromeDriver();  //driver object i olusturduk
 
         //3 - Write Test scripts
         //Maximize the window

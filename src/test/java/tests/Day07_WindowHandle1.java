@@ -7,7 +7,7 @@ import utilities.TestBase;
 
 import java.util.Set;
 
-public class Day07_windowHandle2 extends TestBase {
+public class Day07_WindowHandle1 extends TestBase {
 //    Method name:windowHandle
     @Test
     public void windowHandle(){
