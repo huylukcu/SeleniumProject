@@ -10,13 +10,16 @@ public class Alerts extends TestBase {
     public void acceptAlert() throws InterruptedException {
        // acceptAlert() ===>click on the first alert
         driver.get("https://testcenter.techproeducation.com/index.php?page=javascript-alerts");
-        driver.findElement(By.xpath("//button[@class='btn btn-primary'][1]")).click();
-        Thread.sleep(2000);
-        //verify the text "I am a Js Alert"
-        String actualAlertText = driver.switchTo().alert().getText();
-        Assert.assertEquals("I am a JS Alert",actualAlertText);
-        //click OK,
+
+        driver.findElement(By.xpath("//button[.='Click for JS Alert']")).click();
+        //verify the text “I am a JS Alert” ,
+        String x = driver.switchTo().alert().getText();
+        Assert.assertEquals("I am a JS Alert",x);
+        //click OK ,
         driver.switchTo().alert().accept();
+        //and Verify “You successfully clicked an alert”
+
+
 
     }
 }

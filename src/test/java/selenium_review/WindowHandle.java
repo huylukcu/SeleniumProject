@@ -1,51 +1,47 @@
 package selenium_review;
-
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.WindowType;
 import utilities.TestBase;
-
-import static java.awt.SystemColor.window;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
 public class WindowHandle extends TestBase {
     // Open 3 new windows and verify their titles --
-
     @Test
-    public void newWindowTest() throws InterruptedException {
+    public void newWindowTest() {
         // Open "https://www.techproeducation.com" on window 1
         driver.get("https://techproeducation.com/");
-        //Get the title of the page
-        String techproTitle = driver.getTitle();
-
+        String techproTitle = driver.getTitle();//Get the title of the page
         //Verify that title contains "Techpro Education"
         Assert.assertTrue(techproTitle.contains("Techpro"));
-        //Open "https://www.amazon.com" on a NEW window 2
-        driver.get("https://amazon.com/");
+        String techProHandle = driver.getWindowHandle();
 
-        //Get the title of the page
-        String amaoznTitle = driver.getTitle();
+        //Open "https://www.amazon.com" on a NEW window 2
+        driver.switchTo().newWindow(WindowType.WINDOW);
+        driver.get("https://www.amazon.com");
+        String amaoznTitle = driver.getTitle();//Get the title of the page
         // Verify that title contains "Amazon"
-        Assert.assertTrue(amaoznTitle.contains("Amazon"));
+        Assert.assertTrue(amaoznTitle.contains("on"));
+        String amazonhandle = driver.getWindowHandle();
+
         //Open "https://www.linkedin.com" on a NEW window 3
         driver.get("https://www.linkedin.com");
-        // Get the title of the page
-        String linkedTitle = driver.getTitle();
+        String linkedTitle = driver.getTitle();// Get the title of the page
         //Verify that title contains "LinkedIn"
         Assert.assertTrue(linkedTitle.contains("LinkedIn"));
 
         //Switch back to Techpro
-        Thread.sleep(3000);
-        driver.switchTo().window(techProHandle)
+        driver.switchTo().window(amazonhandle);
+        System.out.println(driver.getCurrentUrl());
 
-//    Switch back to Amazon
-//    And
-//    Switch back to Linkedin
+
+
+        //    Switch back to Amazon
+        //    And
+        //    Switch back to Linkedin.get
 //   */
     }
 
-    @Test
+   /* @Test
     public void tabHandleTest() {
         // Open "https://www.techproeducation.com" on window 1
         driver.get("https://techproeducation.com/");
@@ -75,4 +71,3 @@ public class WindowHandle extends TestBase {
 //    Switch back to Linkedin
 //   */
     }
-}
