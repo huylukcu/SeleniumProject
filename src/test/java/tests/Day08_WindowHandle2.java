@@ -46,8 +46,7 @@ import utilities.TestBase;
             System.out.println("Linkedin : "+driver.getCurrentUrl());
         }
     }
-
-        git /*
+        /*
          Multiple windows
          The multiple windows may open when there is a link that opens in a new TAB or WINDOWS
          We use windowHandle to get the current window id, windowHandles to get all open windows ids

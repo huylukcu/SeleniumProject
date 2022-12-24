@@ -32,4 +32,11 @@ public class Day10_FileUpload extends TestBase {
 //    And click on the upload button
 //    Then verify the File Uploaded!  Message displayed
 }
+ /*
+    How do you upload a file with selenium?
+    -First selenium has limitation automation of files. But file upload can be done with selenium.
+    We locate the chose file button and use send keys function to send the path of the file.
+    Then we click upload button to upload the file.
+    Path of the file should be dynamic - use System.getProperty("user.home");
+     */
 
