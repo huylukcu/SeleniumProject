@@ -46,4 +46,10 @@ import utilities.TestBase;
             System.out.println("Linkedin : "+driver.getCurrentUrl());
         }
     }
+/*
+Multiple windows
+The multiple windows may open when there is a link that opens in a new TAB or WINDOWS
+We use windowHandle to get the current window id, windowHandles to get all open windows ids
+We use set of list to get all window ids and switch to the desired window using loop and if condition
+/*
 
