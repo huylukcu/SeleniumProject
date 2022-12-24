@@ -25,8 +25,11 @@ public class Day10_AutoComplete extends TestBase {
         //    Then verify the result contains ‘United Kingdom’
         Assert.assertTrue(driver.findElement(By.id("result")).getText().contains("United Kingdom"));
     }
-
-
-
-
+    @Test
+    public void autoCompleteTestWithReusabelMethod() throws InterruptedException {
+        driver.get("https://testcenter.techproeducation.com/index.php?page=autocomplete");
+        searchAndSelectFromList("uni","United Kingdom");// TEST CASE 1
+        searchAndSelectFromList("an","Angola");//TEST CASE 2
+        searchAndSelectFromList("bah","Bahamas");//TEST CASE 3
+    }
 }
