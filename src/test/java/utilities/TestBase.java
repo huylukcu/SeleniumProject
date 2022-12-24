@@ -5,6 +5,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -44,4 +46,9 @@ public abstract class TestBase {
 //        Verifying if result contains the option that i selected DYNAMICALLY using PAREMETER 2
         Assert.assertTrue(driver.findElement(By.id("result")).getText().contains(textFromList));
     }
-}
+//    TAKE SCREENSHOT OF ENTIRE PAGE WITH THIS REUSABLE METHOD
+    public void takeScreenshotOfPage(){
+//        1.
+        ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+
+    }}
