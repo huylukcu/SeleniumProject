@@ -24,4 +24,3 @@ public class Day10_ScreenshotsOfEntirePage extends TestBase {
 
 
 
-}
