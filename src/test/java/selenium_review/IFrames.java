@@ -17,4 +17,4 @@ public class IFrames extends TestBase {
     //Delete the text in the text box
     //Type “This text box is inside the iframe”
     //Verify the text Elemental Selenium text is displayed on the page
-}}
+    }}
