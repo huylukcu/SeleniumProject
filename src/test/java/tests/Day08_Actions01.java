@@ -8,7 +8,7 @@ import utilities.TestBase;
 
 import static org.junit.Assert.assertEquals;
 
-public class Day08_Actions1 extends TestBase {
+public class Day08_Actions01 extends TestBase {
                /*
         Given
                 Go to "https://the-internet.herokuapp.com/context_menu"
