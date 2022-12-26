@@ -1,4 +1,4 @@
-package Practises;
+package Practises.practice02;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -6,7 +6,7 @@ import utilities.TestBase;
 
 import static org.junit.Assert.assertEquals;
 
-public class Q06_Alert extends TestBase {
+public class Q02_Alert extends TestBase {
     /*
     Given
         Go to "http://webdriveruniversity.com/Popup-Alerts/index.html"

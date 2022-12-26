@@ -17,5 +17,4 @@ public class DragAndDrop extends TestBase {
         Actions actions = new Actions(driver);
     }
 
-
 }

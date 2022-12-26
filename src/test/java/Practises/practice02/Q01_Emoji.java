@@ -1,4 +1,4 @@
-package Practises;
+package Practises.practice02;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -7,7 +7,7 @@ import utilities.TestBase;
 
 import java.util.List;
 
-public class Q05_Emoji extends TestBase {
+public class Q01_Emoji extends TestBase {
          /*
     Given
         Go to https://www.jqueryscript.net/demo/Easy-iFrame-based-Twitter-Emoji-Picker-Plugin-jQuery-Emoojis/

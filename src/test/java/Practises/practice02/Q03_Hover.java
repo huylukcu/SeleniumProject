@@ -1,8 +1,8 @@
-package Practises;
+package Practises.practice02;
 
 import utilities.TestBase;
 
-public class Q07_Hover extends TestBase {
+public class Q03_Hover extends TestBase {
     /*
    Given
         Go to https://www.gmibank.com/
