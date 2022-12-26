@@ -51,8 +51,6 @@ public class Day09_DragAndDrop extends TestBase {
     //user Actions class to move source into target
     Actions actions = new Actions(driver);
     actions.clickAndHold(source).moveByOffset(400,-10).build().perform();
-
-
 }}
 
 
