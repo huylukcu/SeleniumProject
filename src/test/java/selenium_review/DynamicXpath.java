@@ -50,6 +50,4 @@ public class DynamicXpath {
     public void tearDown(){
         driver.quit();
     }
-
-
 }
