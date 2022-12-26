@@ -30,11 +30,6 @@ public class Day08_Actions02 extends TestBase {
         //then verify the page title contains "Your Account"
         Assert.assertTrue(driver.getTitle().contains("Your Account"));
 
-
-
-
-
-
     }
 
 }
