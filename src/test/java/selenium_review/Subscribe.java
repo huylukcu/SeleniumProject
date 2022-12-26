@@ -9,7 +9,7 @@ import utilities.TestBase;
 
 public class Subscribe extends TestBase {
     @Test
-            public void test(){
+    public void test(){
         //1. Navigate to url 'http://automationexercise.com'
         driver.get("http://automationexercise.com");
 
@@ -34,4 +34,5 @@ public class Subscribe extends TestBase {
         driver.findElement(By.xpath("//*[text()='You have been successfully subscribed!']")).isDisplayed();
 
     }
+
 }
