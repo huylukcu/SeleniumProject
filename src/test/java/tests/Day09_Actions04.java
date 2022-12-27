@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
-public class Day09_DragAndDrop extends TestBase {
+public class Day09_Actions04 extends TestBase {
     @Test
     public void dragAndDropTest(){
         driver.get("https://jqueryui.com/droppable/");
@@ -15,7 +15,9 @@ public class Day09_DragAndDrop extends TestBase {
         WebElement target = driver.findElement(By.id("droppable"));
 //        user Actions class to move source into target
         Actions actions = new Actions(driver);
-        actions.dragAndDrop(source,target).perform();
+        actions.
+                dragAndDrop(source,target).
+                perform();
     }
     /*
     When test fails:
@@ -38,7 +40,6 @@ public class Day09_DragAndDrop extends TestBase {
                 .moveToElement(target)
                 .build()
                 .perform();//holding the source and moving into the target
-
     }
     @Test
             public void moveByOffsetTest() {

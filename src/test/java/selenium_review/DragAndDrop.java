@@ -13,11 +13,23 @@ public class DragAndDrop extends TestBase {
         //belows elements in the iframes so switch to iframe first
         driver.switchTo().frame(0);
 
-        WebElement sourse = driver.findElement(By.id("draggable"));
+        WebElement source = driver.findElement(By.id("draggable"));
         WebElement target = driver.findElement(By.id("droppable"));
 
         Actions actions = new Actions(driver);
-        actions.dragAndDrop(sourse, target).perform();
+        actions.dragAndDrop(source, target).perform();
     }
+    @Test
+            public void test2() {
 
-}
+        driver.get("https://jqueryui.com/droppable/");
+        //belows elements in the iframes so switch to iframe first
+        driver.switchTo().frame(0);
+
+        WebElement source = driver.findElement(By.id("draggable"));
+        WebElement target = driver.findElement(By.id("droppable"));
+        Actions action = new Actions(driver);
+        action.clickAndHold(source).moveToElement(target).build().perform();
+
+
+    }}
