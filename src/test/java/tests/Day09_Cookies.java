@@ -23,10 +23,9 @@ public class Day09_Cookies extends TestBase {
             System.out.println("Cookie value ==>>> "+eachCookie.getValue());
             System.out.println("Cookie Name ==>>> "+eachCookie.getName());
         }
-
 //        3. Get the cookies by their name
         System.out.println("Cookie Named : "+driver.manage().getCookieNamed("i18n-prefs"));//entering cookie name and getting the entire cookie
-    //    4. Add new cookie
+//    4. Add new cookie
         Cookie cookie = new Cookie("my-fav-cookie","apple-pie");
         driver.manage().addCookie(cookie);
         Thread.sleep(2000);
@@ -43,5 +42,4 @@ public class Day09_Cookies extends TestBase {
       int finalNumberOfCookies = driver.manage().getCookies().size();
         System.out.println("Final Number Of cookies ===>>> "+finalNumberOfCookies);
 }
-
 }
