@@ -26,27 +26,26 @@ public class Q02_ extends TestBase {
     And
         Assert that file Content contains "Hello, I am uploaded file"
      */
+        //Go to "https://cgi-lib.berkeley.edu/ex/fup.html"
+        driver.get("https://cgi-lib.berkeley.edu/ex/fup.html");
 
-            //Go to "https://cgi-lib.berkeley.edu/ex/fup.html"
-            driver.get("https://cgi-lib.berkeley.edu/ex/fup.html");
+        //Type "My File" into "Notes about the file" input
+        driver.findElement(By.name("note")).sendKeys("My File");
 
-            //Type "My File" into "Notes about the file" input
-            driver.findElement(By.name("note")).sendKeys("My File");
+        //Select the file to upload
+        //Click "Choose File" button
+        String userHome = System.getProperty("user.home");
+        driver.findElement(By.name("upfile")).sendKeys( userHome+"/Desktop/My File");
 
-            //Select the file to upload
-            //Click "Choose File" button
-            String userHome = System.getProperty("user.home");
-            driver.findElement(By.name("upfile")).sendKeys(userHome + "/Desktop/text.txt");
+        //Click on "Press" button
+        driver.findElement(By.xpath("//input[@type='submit']")).click();
 
-            //Click on "Press" button
-            driver.findElement(By.xpath("//input[@type='submit']")).click();
+        //Assert that "Your notes on the file were" equals "My File"
+        String note = driver.findElement(By.xpath("//blockquote")).getText();
+        assertEquals("My File", note);
 
-            //Assert that "Your notes on the file were" equals "My File"
-            String note = driver.findElement(By.xpath("//blockquote")).getText();
-            assertEquals("My File", note);
-
-            //Assert that file Content contains "Hello, I am uploaded file"
-            String fileContent = driver.findElement(By.xpath("//pre")).getText();
-            assertTrue(fileContent.contains("Hello, I am uploaded file"));
-        }
+        //Assert that file Content contains "Hello, I am uploaded file"
+        String fileContent = driver.findElement(By.xpath("//pre")).getText();
+        assertTrue(fileContent.contains("Hello, I am uploaded file"));
     }
+}
