@@ -6,6 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import utilities.TestBase;
 
+import static org.junit.Assert.assertEquals;
+
 public class Q01_DragDrop extends TestBase {
     @Test
     public void dragAndDropTest() {
@@ -24,7 +26,7 @@ public class Q01_DragDrop extends TestBase {
         WebElement creditAccount = driver.findElement(By.id("loan"));
         WebElement price = driver.findElement(By.id("fourth"));
         WebElement debitAmount = driver.findElement(By.id("amt7"));
-
+        WebElement creditAmount = driver.findElement(By.id("amt8"));
 
         //Create actions obj
         Actions actions = new Actions(driver);
@@ -34,10 +36,10 @@ public class Q01_DragDrop extends TestBase {
         actions.dragAndDrop(bank,debitAccount).perform();
         actions.dragAndDrop(sales,creditAccount).perform();
         actions.dragAndDrop(price,debitAmount).perform();
+        actions.dragAndDrop(price,creditAmount).perform();
 
-
-
-
-
+        //Verify they are dropped.
+        WebElement perfect = driver.findElement(By.id("equal"));
+        assertEquals("Perfect!", perfect.getText());
     }
 }
