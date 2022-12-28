@@ -33,25 +33,26 @@ public class Q02 extends TestBase {
 
         for (WebElement e:dropdownAll
         ) {
-            System.out.println( item + ". dropdown: " + e.getText() + " ");
+            System.out.println(item + ". dropdown: " + e.getText() + " ");
             item++;
 
-        // Arama kutusuna Les Miserables yazalım ve arama yapalim.
-        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Harry Potter" + Keys.ENTER);
+            // Arama kutusuna Les Miserables yazalım ve arama yapalim.
+            driver.findElement(By.id("twotabsearchtextbox")).sendKeys("Harry Potter" + Keys.ENTER);
 
-        // Sonuc sayisini ekrana yazdiralim.
-        // Sonucların Harry Potter i icerdigini assert edelim.
+            // Sonuc sayisini ekrana yazdiralim.
+            // Sonucların Harry Potter i icerdigini assert edelim.
 
-        WebElement resultText=driver.findElement(By.xpath("//span[.='1-16 of over 60,000 results for']"));
-        String result=resultText.getText();
-        String resultArr[]=result.split(" ");
-        String textResult=resultArr[3];
-        System.out.println( "Bulunan sonuç sayısı: " + textResult );
+            WebElement resultText = driver.findElement(By.xpath("//span[.='1-16 of over 60,000 results for']"));
+            String result = resultText.getText();
+            String resultArr[] = result.split(" ");
+            String textResult = resultArr[3];
+            System.out.println("Bulunan sonuç sayısı: " + textResult);
 
-        String actualContain=driver.getTitle();
-        String expectedContain="Harry Potter";
-        Assert.assertTrue("Actual Page doesnt content 'Harry Potter'",actualContain.contains(expectedContain));
-    }
+            String actualContain = driver.getTitle();
+            String expectedContain = "Harry Potter";
+            Assert.assertTrue("Actual Page doesnt content 'Harry Potter'", actualContain.contains(expectedContain));
+
+        }
 }}
 
 

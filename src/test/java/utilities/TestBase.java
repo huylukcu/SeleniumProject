@@ -1,6 +1,7 @@
 package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -10,7 +11,11 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 public abstract class TestBase {
 
@@ -27,7 +32,9 @@ public abstract class TestBase {
 //public void tearDown(){
 //    driver.quit();
 //}
-    //    AUTO COMPLETE REUSABLE METHOD
+
+
+//    AUTO COMPLETE REUSABLE METHOD
 //    THIS CODE IS USED FOR SELECTING AND VERIFYING OUR APP AUTO COMPLETE SEARCH FUNCTIONALITY
 //    NOTE: THIS REUSABLE METHOD DESIGNED FOR OUR CURRENT PROJECT. THIS MAY NOT WORK FOR NEW PROJECTS, BUT CAN BE MODIFIED AND USED FOR THAT NEW PROJECT
 //    NOTE: YOU WILL SEE THIS KIND OF REUSABLE METHOD THAT IS SPECIFIC TO YOUR OWN PROJECT
@@ -47,8 +54,14 @@ public abstract class TestBase {
         Assert.assertTrue(driver.findElement(By.id("result")).getText().contains(textFromList));
     }
 //    TAKE SCREENSHOT OF ENTIRE PAGE WITH THIS REUSABLE METHOD
-    public void takeScreenshotOfPage(){
-//        1.
-        ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+    public void takeScreenshotOfPage() throws IOException {
+//        1. Take screenshot using getScreenshotAs method and TakeScreenshot API -coming from selenium
+       File image = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+//        2. Save the screenshot in a path and Save with dynamic name
+        String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting the current local date and time
+
+        String path = System.getProperty("user.dir") + "/test-output/Screenshots/" + currentTime + ".png";//Where we save the image
+        FileUtils.copyFile(image,new File(path));
 
     }}
