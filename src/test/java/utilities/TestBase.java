@@ -10,14 +10,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
 
 public abstract class TestBase {
-
     protected static WebDriver driver;
-    public void setUp(){
+
+    @Before
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));//15 seconds wait in case needed
@@ -40,7 +42,7 @@ public abstract class TestBase {
         driver.findElement(By.id("myCountry")).sendKeys(keyword);//uni
         Thread.sleep(2000);
 //        Selecting an option from the list DYNAMICALLY using PARAMETER 2
-        driver.findElement(By.xpath("//div[@id='myCountryautocomplete-list']//div[.='"+textFromList+"']")).click();//United Kingdom
+        driver.findElement(By.xpath("//div[@id='myCountryautocomplete-list']//div[.='" + textFromList + "']")).click();//United Kingdom
         Thread.sleep(2000);
 //        Nothing special. Just clicking on submit button
         driver.findElement(By.xpath("//input[@type='button']")).click();//click on submit button
@@ -53,17 +55,17 @@ public abstract class TestBase {
     //    TAKE SCREENSHOT OF ENTIRE PAGE WITH THIS REUSABLE METHOD
     public void takeScreenshotOfPage() throws IOException {
 //        1. Take screenshot using getScreenshotAs method and TakeScreenshot API-coming from selenium
-        File image = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+        File image = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
 //        2. Creating a PATH and dynamic name for the image
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting the current local date and time
 //        path is where we save the screenshot. PROJECT/FOLDER    /FOLDER     /NAME OF IMAGE  .png
-        String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";//Where we save the image
+        String path = System.getProperty("user.dir") + "/test-output/Screenshots/" + currentTime + "image.png";//Where we save the image
 
 //        3. Saving the IMAGE in the PATH
-        FileUtils.copyFile(image,new File(path));
-    }
+        FileUtils.copyFile(image, new File(path));
 
+    }
     //    TAKE SCREENSHOT OF SPECIFIC ELEMENT
     public void takeScreenshotOfTheElement(WebElement element) throws IOException {
 //        1. take screenshot
@@ -71,10 +73,9 @@ public abstract class TestBase {
 //        2. Creating a PATH and dynamic name for the image
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting the current local date and time
 //        path is where we save the screenshot. PROJECT/FOLDER    /FOLDER     /NAME OF IMAGE  .png
-        String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";//Where we save the image
+        String path = System.getProperty("user.dir") + "/test-output/Screenshots/" + currentTime + "image.png";//Where we save the image
 
 //        3. Saving the IMAGE in the PATH
-        FileUtils.copyFile(image,new File(path));
-
+        FileUtils.copyFile(image, new File(path));
     }
 }
