@@ -13,12 +13,13 @@ public class Day11_ScreenShotOfSfecificElements extends TestBase {
     public void screenshotTest() throws IOException, IOException {
         driver.get("https://www.techproeducation.com");
         WebElement techProEdLogo = driver.findElement(By.xpath("//div[@data-id='898ce2e']"));
+        
         //verifying the logo
         Assert.assertTrue(techProEdLogo.isDisplayed());
         //getting the screenshot using reusable method
         takeScreenshotOfTheElement(techProEdLogo);
 
-//        taking screenshot of social media icons
+        //taking screenshot of social media icons
         WebElement socials = driver.findElement(By.xpath("//div[@data-id='d7545f2']"));
         takeScreenshotOfTheElement(socials);
 
