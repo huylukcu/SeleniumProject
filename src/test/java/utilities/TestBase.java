@@ -5,10 +5,7 @@ import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
-import org.openqa.selenium.By;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.io.File;
@@ -64,4 +61,14 @@ public abstract class TestBase {
         String path = System.getProperty("user.dir") + "/test-output/Screenshots/" + currentTime + ".png";//Where we save the image
         FileUtils.copyFile(image,new File(path));
 
-    }}
+    }
+//Take
+    public void takeScreenshotOfTheElement(WebElement element) {
+//        1.take
+        element.getScreenshotAs(OutputType.FILE);
+        //        2. Save the screenshot in a path and Save with dynamic name
+        String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting the current local date and time
+
+
+    }
+}

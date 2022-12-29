@@ -35,17 +35,17 @@ public class Q02_ extends TestBase {
         //Select the file to upload
         //Click "Choose File" button
         String userHome = System.getProperty("user.home");
-        driver.findElement(By.name("upfile")).sendKeys( userHome+"/Desktop/My File");
+        driver.findElement(By.name("upfile")).sendKeys( userHome+"/Desktop/POLIMORPHISIM");
 
         //Click on "Press" button
         driver.findElement(By.xpath("//input[@type='submit']")).click();
 
         //Assert that "Your notes on the file were" equals "My File"
         String note = driver.findElement(By.xpath("//blockquote")).getText();
-        assertEquals("My File", note);
+        assertEquals("object", note);
 
         //Assert that file Content contains "Hello, I am uploaded file"
         String fileContent = driver.findElement(By.xpath("//pre")).getText();
-        assertTrue(fileContent.contains("Hello, I am uploaded file"));
+        assertTrue(fileContent.contains("object"));
     }
 }
