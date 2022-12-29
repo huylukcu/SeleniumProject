@@ -16,7 +16,7 @@ public class Q02_FileUpload extends TestBase {
             driver.findElement(By.name("note")).sendKeys("My File");
             //Select the file to upload
             //Click "Choose File" button
-            driver.findElement(By.name("upfile")).sendKeys("/Users/hyry/Desktop/test");
+            driver.findElement(By.name("upfile")).sendKeys("/Users/hyry/Desktop/txt");
 
             //Click on "Press" button
             driver.findElement(By.xpath("//input[@type='submit']")).click();
