@@ -23,7 +23,7 @@ public class Day10_ScreenshotsOfEntirePage extends TestBase {
       searchAndSelectFromList("uni","United Kingdom");// TEST CASE 1
 
 
-//        TAKE SCREENSHOT
+//       TAKE SCREENSHOT
 
 //        Add click on submit button
 //        TAKE SCREENSHOT
