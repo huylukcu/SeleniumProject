@@ -17,24 +17,22 @@ import java.util.Date;
 public abstract class TestBase {
 
     protected static WebDriver driver;
-
-    @Before
-    public void setUp() {
+    public void setUp(){
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));//15 seconds wait in case needed
         driver.manage().window().maximize();
     }
-//@After
-//public void tearDown(){
-//    driver.quit();
-//}
+//    @After
+//    public void tearDown(){
+//        driver.quit();
+//    }
 
-
-//    AUTO COMPLETE REUSABLE METHOD
+    //    AUTO COMPLETE REUSABLE METHOD
 //    THIS CODE IS USED FOR SELECTING AND VERIFYING OUR APP AUTO COMPLETE SEARCH FUNCTIONALITY
 //    NOTE: THIS REUSABLE METHOD DESIGNED FOR OUR CURRENT PROJECT. THIS MAY NOT WORK FOR NEW PROJECTS, BUT CAN BE MODIFIED AND USED FOR THAT NEW PROJECT
 //    NOTE: YOU WILL SEE THIS KIND OF REUSABLE METHOD THAT IS SPECIFIC TO YOUR OWN PROJECT
+//    THE POINT OF REUSABLE METHOD IS : WRITE ONCE USE MULTIPLE TIMES TO SAVE TIME AND SHORT TEST CLASS
     public static void searchAndSelectFromList(String keyword, String textFromList) throws InterruptedException {
 //        searchAndSelectFromList('uni', 'United Kingdom');
         Thread.sleep(2000);//putting wait to see steps slower
@@ -49,26 +47,34 @@ public abstract class TestBase {
         Thread.sleep(2000);
 //        Verifying if result contains the option that i selected DYNAMICALLY using PAREMETER 2
         Assert.assertTrue(driver.findElement(By.id("result")).getText().contains(textFromList));
+
     }
-//    TAKE SCREENSHOT OF ENTIRE PAGE WITH THIS REUSABLE METHOD
+
+    //    TAKE SCREENSHOT OF ENTIRE PAGE WITH THIS REUSABLE METHOD
     public void takeScreenshotOfPage() throws IOException {
-//        1. Take screenshot using getScreenshotAs method and TakeScreenshot API -coming from selenium
-       File image = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+//        1. Take screenshot using getScreenshotAs method and TakeScreenshot API-coming from selenium
+        File image = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 
-//        2. Save the screenshot in a path and Save with dynamic name
+//        2. Creating a PATH and dynamic name for the image
         String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting the current local date and time
+//        path is where we save the screenshot. PROJECT/FOLDER    /FOLDER     /NAME OF IMAGE  .png
+        String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";//Where we save the image
 
-        String path = System.getProperty("user.dir") + "/test-output/Screenshots/" + currentTime + ".png";//Where we save the image
+//        3. Saving the IMAGE in the PATH
         FileUtils.copyFile(image,new File(path));
-
     }
-//Take
-    public void takeScreenshotOfTheElement(WebElement element) {
-//        1.take
-        element.getScreenshotAs(OutputType.FILE);
-        //        2. Save the screenshot in a path and Save with dynamic name
-        String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting the current local date and time
 
+    //    TAKE SCREENSHOT OF SPECIFIC ELEMENT
+    public void takeScreenshotOfTheElement(WebElement element) throws IOException {
+//        1. take screenshot
+        File image = element.getScreenshotAs(OutputType.FILE);
+//        2. Creating a PATH and dynamic name for the image
+        String currentTime = new SimpleDateFormat("yyyyMMddhhmmss").format(new Date());//getting the current local date and time
+//        path is where we save the screenshot. PROJECT/FOLDER    /FOLDER     /NAME OF IMAGE  .png
+        String path = System.getProperty("user.dir")+"/test-output/Screenshots/"+currentTime+"image.png";//Where we save the image
+
+//        3. Saving the IMAGE in the PATH
+        FileUtils.copyFile(image,new File(path));
 
     }
 }
