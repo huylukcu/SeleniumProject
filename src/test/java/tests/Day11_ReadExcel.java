@@ -55,6 +55,7 @@ public class Day11_ReadExcel {
             String county = sheet1.getRow(rowNum).getCell(0).toString();
             String capital=sheet1.getRow(rowNum).getCell(1).toString();
             countryCapitals.put(county,capital);
+            System.out.println(countryCapitals);
         }
 
     }
