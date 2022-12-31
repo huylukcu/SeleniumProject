@@ -1,6 +1,4 @@
 package tests;
-
-
 import org.apache.poi.ss.usermodel.*;
 import org.junit.Assert;
 import org.junit.Test;
@@ -8,7 +6,6 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-
 public class Day11_ReadExcel {
     @Test
     public void readExcelTest() throws IOException {
@@ -35,9 +32,8 @@ public class Day11_ReadExcel {
         Cell r1c2 = row1.getCell(1);
         System.out.println("R1C2 : "+r1c2.toString());
 //        Go to 2nd row first cell  and assert if the data equal to USA
-        String r2c1 = sheet1.getRow(1).getCell(0).toString();
+        String r2c1 = sheet1.getRow(1).getCell(0).toString();//METHOD CHAIN
         Assert.assertEquals("USA",r2c1);
-
 //        Go to 3rd row 2nd cell-chain the row and cell
         String r3c2 = sheet1.getRow(2).getCell(1).toString();
         System.out.println(r3c2);
