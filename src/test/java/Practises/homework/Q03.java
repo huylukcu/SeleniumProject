@@ -19,5 +19,6 @@ public class Q03 extends TestBase {
        }
         @Test
       public void imageTest() {
-            driver.get("https://www.google.com/");
+            driver.get(
+                    "https://www.google.com/");
         }}
