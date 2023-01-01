@@ -14,9 +14,9 @@ public class Day11_ReadExcel {
         String path = "./src/test/java/resources/Capitals.xlsx";
 //        ".\\src\\test\\java\\resources\\Capitals.xlsx" //WINDOWS
 //        Open the file
-        FileInputStream fileInputStream = new FileInputStream(path);
-//        Open the workbook using fileinputstream
-        Workbook workbook = WorkbookFactory.create(fileInputStream);
+        FileInputStream fileInputStream = new FileInputStream(path);//you can access by using java
+//        Open the workbook using fileinputstream,
+        Workbook workbook = WorkbookFactory.create(fileInputStream);//
 //        Open the first worksheet
         Sheet sheet1 = workbook.getSheet("Sheet1");
 //        workbook.getSheetAt(0);//ALTERNATIVELY
