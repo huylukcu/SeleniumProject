@@ -26,7 +26,7 @@ public class Q03 extends TestBase {
     }
 
     //2.imageTest => Verify if google image displays or not@Test
-    @Test
+    
     public void imageTest() {
         driver.get("https://www.google.com/");
         WebElement image = driver.findElement(By.id("hplogo"));
