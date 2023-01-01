@@ -39,20 +39,21 @@ public class Day11_ReadExcel {
         System.out.println(r3c2);
 //        Find the number of row
         int numberOfRow = sheet1.getLastRowNum()+1;//index starts at 0, so add 1 to find total number of row
-        System.out.println("ROW COUNT : "+numberOfRow);
-//        Find the number of used row
-        int numberOfData = sheet1.getPhysicalNumberOfRows();//index starts at 1. Returns the number of row that has a DATA
-        System.out.println("Number of Data : "+numberOfData);
+        System.out.println("ROW COUNT : "+numberOfRow);//butun rows lari sayar
+//       Find the number of used row
+       int numberOfData = sheet1.getPhysicalNumberOfRows();//index starts at 1. Returns the number of row that has a DATA
+       System.out.println("Number of Data : "+numberOfData);//sadece data olanlari cagirir
 //        Print country, capitol key value pairs as map object
-//        {{USA,D.C},{ France,Paris },...}
-//        Create a Map that will store the country, capital pairs
+//       {{USA,D.C},{ France,Paris },...}
+//       Create a Map that will store the country, capital pairs
         Map<String,String> countryCapitals = new HashMap<>();
-        for (int rowNum =1 ; rowNum<numberOfRow; rowNum++){//row index starts at 1, ends at 11
-            String county = sheet1.getRow(rowNum).getCell(0).toString();
-            String capital=sheet1.getRow(rowNum).getCell(1).toString();
-            countryCapitals.put(county,capital);
-            System.out.println(countryCapitals);
-        }
+       for (int rowNum =1 ; rowNum<numberOfRow; rowNum++){//row index starts at 1, ends at 11
+          String county = sheet1.getRow(rowNum).getCell(0).toString();
+          String capital=sheet1.getRow(rowNum).getCell(1).toString();
+           countryCapitals.put(county,capital);
+          System.out.println(countryCapitals);
 
-    }
-}
+      }
+
+    }}
+
