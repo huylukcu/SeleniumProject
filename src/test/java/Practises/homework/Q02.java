@@ -27,6 +27,4 @@ public class Q02 extends TestBase {
         String result = resultText.getText();
         System.out.println(result);
     }
-
-
 }
