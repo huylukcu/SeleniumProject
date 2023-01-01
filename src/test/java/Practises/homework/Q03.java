@@ -32,7 +32,6 @@ public class Q03 extends TestBase {
         WebElement image = driver.findElement(By.id("hplogo"));
         Assert.assertTrue(image.isDisplayed());
      }
-
     //3.Verify if the Gmail link is displayed
     @Test
     public void linkTest() {
