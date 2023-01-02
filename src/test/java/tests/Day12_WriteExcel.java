@@ -37,6 +37,7 @@ public class Day12_WriteExcel {
         fileInputStream.close();
         fileOutputStream.close();
 //        Close the workbook
+        workbook.close();
     }
 }
 
