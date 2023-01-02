@@ -37,6 +37,19 @@ public class Day11_ReadExcel {
 //        Go to 3rd row 2nd cell-chain the row and cell
         String r3c2 = sheet1.getRow(2).getCell(1).toString();
         System.out.println(r3c2);
+//      Germany print et
+        String R9C1 = sheet1.getRow(8).getCell(0).toString();
+        System.out.println(R9C1);
+//      Atheans ni print et
+        String R6C2 = sheet1.getRow(5).getCell(1).toString();
+        System.out.println(R6C2);
+//      go to 5rd row 2nd cell
+        String R5C2 = sheet1.getRow(4).getCell(1).toString();
+        System.out.println(R5C2);
+        //go to 9rd row 1.cell
+        String R9c1 = sheet1.getRow(8).getCell(0).toString();
+        System.out.println(R9c1);
+
 //        Find the number of row
         int numberOfRow = sheet1.getLastRowNum()+1;//index starts at 0, so add 1 to find total number of row
         System.out.println("ROW COUNT : "+numberOfRow);//butun rows lari sayar
@@ -54,6 +67,6 @@ public class Day11_ReadExcel {
           System.out.println(countryCapitals);
 
       }
-
-    }}
+    }
+}
 
