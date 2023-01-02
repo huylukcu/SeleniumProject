@@ -55,16 +55,14 @@ public class Q01 {
         List<WebElement>alloptions = select.getOptions();
         for(WebElement each : alloptions){
             System.out.println(each.getText());
-
         }
        // Print the the total number of options in the dropdown
         int numOf = alloptions.size();
         System.out.println(numOf);
     }
-    //Assert if ‘Computers’ is a drop down option.
-    // Print true if “Computers” is an option. Print false otherwise.
-   // boolean isComputersExist = false;
-
+       //Assert if ‘Computers’ is a drop down option.
+       // Print true if “Computers” is an option. Print false otherwise.
+       // boolean isComputersExist = false;
 
     }
 

@@ -14,7 +14,7 @@ public class Day11_ReadExcel {
         String path = "./src/test/java/resources/Capitals.xlsx";
 //        ".\\src\\test\\java\\resources\\Capitals.xlsx" //WINDOWS
 //        Open the file
-        FileInputStream fileInputStream = new FileInputStream(path);//you can access by using java
+        FileInputStream fileInputStream = new FileInputStream(path);//you can access the fileby using java
 //        Open the workbook using fileinputstream,
         Workbook workbook = WorkbookFactory.create(fileInputStream);//
 //        Open the first worksheet
@@ -27,13 +27,13 @@ public class Day11_ReadExcel {
         System.out.println(cell1);
 //        We can convert the cell data to string
         String cell1Data = cell1.toString();
-        System.out.println(cell1Data);
+        System.out.println(cell1Data);//COUNTRY
 //        Go to second cell on that first row and print
         Cell r1c2 = row1.getCell(1);
-        System.out.println("R1C2 : "+r1c2.toString());
+        System.out.println("R1C2 : "+r1c2.toString());//CAPITAL
 //        Go to 2nd row first cell  and assert if the data equal to USA
         String r2c1 = sheet1.getRow(1).getCell(0).toString();//METHOD CHAIN
-        Assert.assertEquals("USA",r2c1);
+        Assert.assertEquals("USA",r2c1);//Paris
 //        Go to 3rd row 2nd cell-chain the row and cell
         String r3c2 = sheet1.getRow(2).getCell(1).toString();
         System.out.println(r3c2);
