@@ -38,6 +38,8 @@ public class ExcellRead {
         int pyscicalNum = sheet1.getPhysicalNumberOfRows();
         System.out.println(pyscicalNum);
 
+        sheet1.getRow(0).getCell(2).setCellValue("CITY");
+
 
 
 

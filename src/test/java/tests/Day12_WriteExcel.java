@@ -14,7 +14,7 @@ public class Day12_WriteExcel {
 //        Store the path of the file as string and open the file
         String path = "./src/test/java/resources/Capitals.xlsx";
 //        Open the workbook
-        FileInputStream fileInputStream = new FileInputStream(path);
+        FileInputStream fileInputStream = new FileInputStream(path);//EXCELL E BISEYLER YAZMAK ICIN
         Workbook workbook = WorkbookFactory.create(fileInputStream);
 //        Open the first worksheet
         Sheet sheet1 = workbook.getSheet("Sheet1");
@@ -34,6 +34,8 @@ public class Day12_WriteExcel {
         FileOutputStream fileOutputStream = new FileOutputStream(path);
         workbook.write(fileOutputStream);
 //        Close the file
+        fileInputStream.close();
+        fileOutputStream.close();
 //        Close the workbook
     }
 }
