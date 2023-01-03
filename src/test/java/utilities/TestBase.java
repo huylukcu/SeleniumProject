@@ -78,4 +78,22 @@ public abstract class TestBase {
 //        3. Saving the IMAGE in the PATH
         FileUtils.copyFile(image, new File(path));
     }
-}
+    /*   HARD WAIT:
+         @param : second
+     */
+    public static void waitFor(int seconds){
+        try {
+            Thread.sleep(seconds*1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }}
+
+    /*
+    JAVASCRIPT EXECUTOR
+    @param WebElement
+    Accepts a web element and scrolls into that element
+     */
+    public void scrollIntoViewJS(WebElement element){
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        js.executeScript("arguments[0].scrollIntoView(true);",element);
+    }}
