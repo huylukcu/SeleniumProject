@@ -1,9 +1,6 @@
 package Practises.homework;
-
-import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import utilities.TestBase;
 
 public class Q05 extends TestBase {
@@ -18,8 +15,5 @@ public class Q05 extends TestBase {
         driver.findElement(By.id("ui-id-3")).click();
 
     // Verify the text contains “Sed non urna.”
-      WebElement select2 = driver.findElement(By.("//p[contains((),'Sed non urna')]");
-        Assert.assertEquals(co)
-//Assert.assertTrue(driver.findElement(By.xpath("//*[@id='ui-id-4']/p")).getText().contains("Sed non urna."));
-
+    // Assert.assertTrue(driver.findElement(By.xpath("//*[@id='ui-id-4']/p")).getText().contains("Sed non urna."));
 }}
