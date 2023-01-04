@@ -1,18 +1,23 @@
 package Practises.homework;
 
 import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import utilities.TestBase;
-import org.openqa.selenium.JavascriptExecutor;
 
 public class Q08 extends TestBase {
     @Test
-    public void test() {
+    public void test() throws InterruptedException {
+       /*
+        When user goes to https://jqueryui.com/autocomplete/
+        And type Apple
+        Then select Applescript
+       */
 
-        //When user goes to https://jqueryui.com/autocomplete/
-        driver.get("https://jqueryui.com/autocomplete");
+        driver.get("https://jqueryui.com/autocomplete/ ");
+        driver.switchTo().frame(0);
+        driver.findElement(By.id("tags")).sendKeys("Apple");
+        waitFor(3);
+        driver.findElement(By.id("ui-id-1")).click();;
 
-         JavascriptExecutor js = (JavascriptExecutor)driver;
-        //And type Apple
-        //Then select Applescript
-    }
-}
+    }    }

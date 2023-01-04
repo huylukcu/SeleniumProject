@@ -17,3 +17,20 @@ public class Q05 extends TestBase {
     // Verify the text contains “Sed non urna.”
     // Assert.assertTrue(driver.findElement(By.xpath("//*[@id='ui-id-4']/p")).getText().contains("Sed non urna."));
 }}
+//    @Test
+//    public void test() {
+//
+////        When user goes to https://jqueryui.com/autocomplete/
+//        driver.get("https://jqueryui.com/autocomplete/");
+//
+////        And type Apple
+//        driver.switchTo().frame(0);
+//
+//        driver.findElement(By.xpath("//input[@id='tags']")).sendKeys("Apple");
+//
+//        waitFor(3);
+//
+////        Then select Applescript
+//
+//        driver.findElement(By.xpath("(//*[text()='AppleScript'])[1]")).click();
+//    }
