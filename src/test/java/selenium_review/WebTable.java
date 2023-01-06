@@ -68,6 +68,6 @@ public class WebTable extends TestBase {
 //            List<WebElement> allRows = driver.findElements(By.xpath("//div[@class='rt-tbody']//div[@class='rt-tr-group']"));
 //            System.out.println("Number of rows : " + allRows.size());
 //
-//            //      8. Print the number of columns in table
+//            //    8. Print the number of columns in table
 //             }
     }}
