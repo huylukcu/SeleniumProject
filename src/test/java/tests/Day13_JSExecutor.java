@@ -11,6 +11,24 @@ public class Day13_JSExecutor extends TestBase {
 
     @Test
     public void scrollIntoViewTest() throws IOException, IOException {
+            /*
+    Given
+        Go to https://techproeducation.com/"
+    When
+        Scroll into "WE OFFER"
+    And
+        Scroll into "LMS LOGIN"
+    And
+        Scroll into "WHY US"
+    And
+        Scroll back up to "Enroll Free"
+    And
+        Scroll all the way down
+    And
+        Scroll all the way up
+    Then
+        Take a screenshot of each step
+     */
         driver.get("https://techproeducation.com/");
         waitFor(3);
 //        1. create js executor object
