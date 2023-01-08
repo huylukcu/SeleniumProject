@@ -1,4 +1,4 @@
-package Practises.homework;
+package practises.homework;
 
 public class Q07 {
   /*  When user goes to https://jqueryui.com/toggle/

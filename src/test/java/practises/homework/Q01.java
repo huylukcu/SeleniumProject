@@ -1,4 +1,4 @@
-package Practises.homework;
+package practises.homework;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;

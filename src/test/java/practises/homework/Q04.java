@@ -1,4 +1,4 @@
-package Practises.homework;
+package practises.homework;
 
 public class Q04 {
 }

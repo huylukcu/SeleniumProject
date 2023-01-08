@@ -1,8 +1,11 @@
-package Practises.practice04;
+package practises.practice04;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import utilities.TestBase;
+
+import java.util.List;
 
 public class Q01 extends TestBase {
     /*
@@ -42,12 +45,9 @@ public class Q01 extends TestBase {
          // Click on login button
          driver.findElement(By.id("login-button")).click();
          //Add all products to cart
+         List<WebElement> addCart = driver.findElements(By.xpath("//button[.='Add to cart']"));
+         for(WebElement w : addCart){
+             w.click();
+         }
 
-
-
-
-
-
-
-     }
-}
+}}
