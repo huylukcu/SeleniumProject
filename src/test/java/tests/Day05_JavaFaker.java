@@ -31,7 +31,7 @@ public class Day05_JavaFaker {
         String username = faker.name().username();
         System.out.println(username);
 
-        //        title
+//        title
         String title = faker.name().title();
         System.out.println(title);
 
