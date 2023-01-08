@@ -35,17 +35,17 @@ public class Day04_LinkTest_review {
 
         //Locate the LMS LOGIN with link text
         //Click on LMS LOGIN
-        driver.findElement(By.linkText("LMS LOGIN")).click();//linkText() and partialLinkText() methods are case-sensitive.
+        driver.findElement(By.linkText("LMS LOGIN")).click();
+        //linkText() and partialLinkText() methods are case-sensitive.
 
         //Assert that LMS page is visible
         String expectedUrl ="https://lms.techproeducation.com/";
         String actualUrl =  driver.getCurrentUrl();
 
         assertEquals("LMS page is 'NOT' visible",expectedUrl,actualUrl);
+        //MESSAGE ONLY BE VISIBLE IF ASSERTION FAILS: LMS LOGIN PAGE IS NOT DISPLAYED
 
     }
-
-
     @Test
     public void LMSPagePartialLinkText() {
         //Go to https://techproeducation.com/
@@ -54,10 +54,13 @@ public class Day04_LinkTest_review {
         //Locate the LMS LOGIN with partialLinkText
         //Click on LMS LOGIN
         driver.findElement(By.partialLinkText("LMS LO")).click();
+        //ALTERNATIVELY WE CAN LOCATE A CORE ELEMENT ON LMS PAGE AND CHECK IF THAT ELEMENT IS DISPLAYED IN THE PAGE
 
         //Assert that LMS page is visible
-        WebElement loginRegisterLink = driver.findElement(By.linkText("Login/Register"));
-        assertTrue(loginRegisterLink.isDisplayed());//isDisplayed() method returns true if the element is displayed on the page otherwise it returns false.
+        WebElement loginElement = driver.findElement(By.linkText("Login/Register"));
+        Assert.assertTrue(loginElement.isDisplayed());// isDisplayed() method returns true if the element is displayed on the page otherwise it returns false.
+    
+        //assertTrue(driver.findElement(By.linkText("Login/Register")).isDisplayed());
     }
     @After
     public void tearDown(){
