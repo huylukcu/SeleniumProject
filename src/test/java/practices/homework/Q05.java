@@ -1,4 +1,4 @@
-package practises.homework;
+package practices.homework;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.TestBase;

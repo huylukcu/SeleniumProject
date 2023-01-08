@@ -1,4 +1,4 @@
-package practises.homework;
+package practices.homework;
 
 import org.junit.Assert;
 import org.junit.Test;

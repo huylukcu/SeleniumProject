@@ -1,4 +1,4 @@
-package practises.practice02;
+package practices.practice02;
 
 import utilities.TestBase;
 

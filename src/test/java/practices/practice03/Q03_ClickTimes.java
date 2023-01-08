@@ -1,4 +1,4 @@
-package practises.practice03;
+package practices.practice03;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
