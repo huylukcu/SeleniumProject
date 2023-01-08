@@ -15,7 +15,7 @@ import java.time.Duration;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class Day04_LinkTest_review {
+public class Day04_LinkTest {
     //Go to https://techproeducation.com/
     //Locate the LMS LOGIN with link text
     //Click on LMS LOGIN
