@@ -51,9 +51,10 @@ public class Day12_WebTables extends TestBase {
 //        Parameter 1 = row number
 //        Parameter 2 = column number
 //        printData(2,3);  => prints data in 2nd row 3rd column
-    public void printData(int rowNum,int colNum) {
-        String xpath = "//table[@id='table1']//tr[" + rowNum + "]//td[" + colNum + "]";//burda xpath dinamic yaptik
-    }
+public void printData(int rowNum,int colNum) {
+    String xpath = "//table[@id='table1']//tr[" + rowNum + "]//td[" + colNum + "]";//burda xpath dinamic yaptik
+    System.out.println(xpath);
+}
     @Test
     public void printDataTest(){
         printData(2,3);  //burda methodu cagiriyoruz
