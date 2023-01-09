@@ -32,7 +32,7 @@ public class Day13_JSExecutor extends TestBase {
         driver.get("https://techproeducation.com/");
         waitFor(3);
 //        1. create js executor object
-        JavascriptExecutor js =(JavascriptExecutor)driver;
+        JavascriptExecutor js =(JavascriptExecutor)driver; //
 //        2. execute the command
         waitFor(3);
 //        scrolling We Offer element
@@ -53,10 +53,11 @@ public class Day13_JSExecutor extends TestBase {
         takeScreenshotOfPage();
      /*
      * What is JS Executor?
-     * It is an API which is used to execute javascript commands in Selenium
+     * It is an API which is used to execute javascript comments in Selenium
+     * JS Executor is coming from selenium
      *
      * Why are we learning JavaScript Executor?
-     * We might need some js executor method to interact with some webelements
+     * We might need some js executor method to interact with some webElements
      * When traditional methods are not enough
      * click, scrolling into a specific element
      *
@@ -68,5 +69,9 @@ public class Day13_JSExecutor extends TestBase {
      * Hover over
      * Change background colour..
      * */
+
+     /*
+
+      */
     }
 }

@@ -1,7 +1,10 @@
 package practices.homework;
+import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import utilities.TestBase;
+
+import static org.junit.Assert.assertTrue;
 
 public class Q05 extends TestBase {
     @Test
@@ -14,8 +17,9 @@ public class Q05 extends TestBase {
     //And user clicks on Section2 accordion
         driver.findElement(By.id("ui-id-3")).click();
 
-    // Verify the text contains “Sed non urna.”
-    // Assert.assertTrue(driver.findElement(By.xpath("//*[@id='ui-id-4']/p")).getText().contains("Sed non urna."));
-}}
-//    @Test
-//    public void test() {}
+        waitFor(2);
+     //Verify the text contains “Sed non urna.”
+        String text = driver.findElement(By.xpath("//*[@id='ui-id-4']")).getText();
+        assertTrue(text.contains("Sed non urna."));
+    }
+}

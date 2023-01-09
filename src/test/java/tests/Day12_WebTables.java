@@ -28,7 +28,7 @@ public class Day12_WebTables extends TestBase {
         int rowNum = 1;
         for (WebElement eachRow : allRows) {
             System.out.println("Row " + rowNum + " => " + eachRow.getText());
-            rowNum++;
+            rowNum++;  //tek tek row number i verir
         }
 //        We can get specific row data
         System.out.println("5th Row Data : " + allRows.get(4).getText());
@@ -46,18 +46,19 @@ public class Day12_WebTables extends TestBase {
             System.out.println("Column " + colNum + " => " + eachData.getText());
             colNum++;
         }
-        printData(1,5);
-
     }
 //    Task 5 : Write a method that accepts 2 parameters
 //        Parameter 1 = row number
 //        Parameter 2 = column number
 //        printData(2,3);  => prints data in 2nd row 3rd column
-    public void printData(int row,int col) {
-        String xpath ="//table[@id='table1']//tr[row]//td[col]";
-        WebElement element = driver.findElement(By.xpath(xpath));
-        System.out.println(element.getText());
+    public void printData(int rowNum,int colNum) {
+        String xpath = "//table[@id='table1']//tr[" + rowNum + "]//td[" + colNum + "]";//burda xpath dinamic yaptik
+    }
+    @Test
+    public void printDataTest(){
+        printData(2,3);  //burda methodu cagiriyoruz
+
+
 
     }
-
 }
