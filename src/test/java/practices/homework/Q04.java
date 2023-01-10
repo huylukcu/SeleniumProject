@@ -8,6 +8,11 @@ public class Q04 extends TestBase {
     //TC01_As user I want to know how many item are there on amazon in the first page after I search “porcelain teapot”?
     //TC02_Order the tea pot prices, find the min, max, and average price to the nearest cent.
  */
+    @Test
+    public void AmazonSearch(){
+    
+    
+    }
 
 
 
