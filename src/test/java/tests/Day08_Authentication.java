@@ -6,7 +6,6 @@ import utilities.TestBase;
 
 public class Day08_Authentication extends TestBase {
 
-
     @Test
     public void authTest() {
         /*
