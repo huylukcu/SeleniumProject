@@ -59,7 +59,5 @@ public void printData(int rowNum,int colNum) {
     public void printDataTest(){
         printData(2,3);  //burda methodu cagiriyoruz
 
-
-
     }
 }
