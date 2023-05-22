@@ -22,7 +22,6 @@ public class Day02_URLVerification {
             System.out.println("BUT EXPECTED URL : "+expectedURL);
         }
         driver.quit();
-
     }
 }
 
