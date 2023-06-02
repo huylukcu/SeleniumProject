@@ -37,6 +37,4 @@ public class Day05_Dynamic_Xpath {
         WebElement userNameText1 = driver.findElement(By.xpath("//*[(text()='Username : Admin')]"));
         Assert.assertTrue(userNameText1.isDisplayed());
     }
-
-
 }

@@ -47,6 +47,5 @@ public class Day01_BasicNavigations {
         //Close/Quit the browser
         //driver.close();
         driver.quit();
-
     }
 }
