@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Day01_MyPrctise {
     public static void main(String[] args) {
-        System.setProperty("webdriver.chrome.driver","./src/resources/drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver","src/resources/drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
 
