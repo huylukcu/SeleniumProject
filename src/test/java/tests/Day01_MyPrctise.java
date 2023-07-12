@@ -11,7 +11,6 @@ public class Day01_MyPrctise {
               WebDriver driver = new EdgeDriver();
               -->we use polimorphism here. Using object in multiple form.
                Creating WebDriver I automated application in different browsers
-
          */
         System.setProperty("webdriver.chrome.driver","src/resources/drivers/chromedriver");
         WebDriver driver = new ChromeDriver();
