@@ -12,6 +12,13 @@ public class Day01_BasicNavigations {
         Set Path
         Create chrome driver
         */
+        /*
+              WebDriver driver = new ChromeDriver();
+              WebDriver driver = new FirefoxDriver();
+              WebDriver driver = new EdgeDriver();
+              -->we use polimorphism here. Using object in multiple form.
+               Creating WebDriver I automated application in different browsers
+         */
 
         /*
         -->For Atomation classimiza otomasyon icin gerekli web driver in yerini gostermeliyiz.
@@ -22,7 +29,7 @@ public class Day01_BasicNavigations {
         */
 
         // 1 - Setup Chrome driver
-        System.setProperty("webdriver.chrome.driver","./src/resources/drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver","./Users/hyry/SeleniumNewProject/src/resources/drivers/chromedriver");
 
         //2 - Create Chrome driver
         WebDriver driver = new ChromeDriver();  //driver object i olusturduk,Polimorphisim
