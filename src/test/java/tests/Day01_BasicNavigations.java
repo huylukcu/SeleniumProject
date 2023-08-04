@@ -29,7 +29,7 @@ public class Day01_BasicNavigations {
         */
 
         // 1 - Setup Chrome driver
-        System.setProperty("webdriver.chrome.driver","./Users/hyry/SeleniumNewProject/src/resources/drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver","./src/resources/drivers/chromedriver");
 
         //2 - Create Chrome driver
         WebDriver driver = new ChromeDriver();  //driver object i olusturduk,Polimorphisim
